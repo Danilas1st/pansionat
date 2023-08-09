@@ -1,0 +1,315 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
+block content_block
+	section.hero 
+		.section_in 
+			.hero_main 
+				.hero_head 
+					h1 Пансионат для пожилых людей <span>в Краснодаре от 1000 рублей
+				.hero_info 
+					p Комфортный дом для счастливой и беззаботной жизни дорогих вам людей
+				.hero_bottom 
+					.hero_btn 
+						button(type="button") Оставить заявку
+					.hero_whatsapp 
+						a(href="#")
+							img(src="i/whatsapp.png", alt="") 
+			.hero_scroll_whatsapp 
+				a(href="#")
+					img(src="i/whatsapp2.png", alt="") 
+				p Свяжитесь с нами в WhatsApp
+	section.organize
+		.section_in 
+			.organize_main 
+				.organize_head 
+					h2 За кем мы <span>организуем</span> уход
+				.orgsnize_list 
+					ul 
+						-for(i = 0; i < 3; i++)
+							li
+								.organize_info
+									.organize_info_image
+										img(src="i/gallery/organize.png", alt="")
+									.organize_info_txt 
+										h6 Самостоятельные пожилые
+										p Человек способен без посторонней помощи выполнять ежедневные рутинные действия.
+								.organize_btn 
+									button(type="button") Заказать
+	section.what 
+		.section_in 
+			.what_main 
+				.what_head
+					h2 Что <span>доступно</sapn> нашим постояльцам?
+				.what_list 
+					ul 
+						-for(i = 0; i < 4; i++)
+							li
+								.what_list_image 
+									img(src="i/what1.png", alt="")
+								.what_list_txt
+									h6 Проживание в <span>комфортных</span> номерах
+									p Номера, оборудованные всем необходимым, а также функциональными кроватями для реабилитации пожилых. Есть возможность выбрать 1-местные , 2-местные и 3-4 местные.
+	section.form 
+		.section_in 
+			.form_main 
+				.form_left 
+					.form_left_image
+						img(src="i/woomen.png", alt="")
+					.form_left_txt 
+						h6 Оставьте заявку
+						p Я отвечу на все ваши вопросы
+				.form_right
+					.form_right_head
+						h2 Запишитесь на <span>бесплатную</span> экскурсию по нашему пансионату
+					.form_btn 
+						button(type="button") Оставить заявку
+	section.accommodations
+	.section_in 
+		.accommodations_main 
+			.accommodations_left 
+				img(src="i/conditions.png", alt="")
+			.accommodations_right 
+				h2 Условия <span>проживания</span>
+			.accommodations_list 
+				ul 
+					li.accommodations_txt 
+						h6 Забота о постояльцах
+						p Ежедневный обход врача, измерение температуры и артериального давления. Выдача назначенных медикаментов и контроль их приема. 
+					li.accommodations_txt 
+						h6 Гигиена и питание
+						p Гигиенические процедуры: стрижка волос и ногтей, обработка пролежней. Помощь в принятии пищи, подбор индивидуальной диеты.
+					li.accommodations_txt 
+						h6 Для людей с особенностями
+						p Функциональные кровати для лежачих больных, стулья и туалеты для инвалидов. Коляски, трости, ходунки и др. Пансионат оборудован поручнями, пандусами.
+					li.accommodations_txt 
+						h6 Разнообразный досуг
+						p Организованный досуг, ежедневные прогулки, заботливые и профессиональные сиделки.
+	section.home 
+		.section_in 
+			.home_main 
+				.home_head 
+					h2 Теплая и комфортная атмосфера, <span>как дома</span>
+					.home_slider_nav 
+						.home_slider_btn_previos 
+							button(type="button")
+								+icon('prev')
+						.home_slider_btn_next 
+							button(type="button")
+								+icon('next')
+				.home_slider_w
+					.home_slider.swiperhome
+						.swiper-wrapper
+							-for(i = 0; i < 7; i++)
+								.swiper-slide 
+									.home_slide_img
+										img(src="i/gallery/gallery1.png", alt="")
+						.swiper_pagination 
+	section.variation 
+		.section_in 
+			.variation_main 
+				.variation_head 
+					h2 <span>Доступные</span> варианты размещения
+				.variation_list 
+					ul 
+						li.variation_info 
+								.variation_info_head 
+									h6 На <span>1</span> день
+								.variation_info_txt 
+									p Если вам нужно срочно отлучиться в другую часть города по работе и не с кем оставить родственника. Утром размещаете - вечером забираете.
+								.variation_info_price
+									p от 1 000 ₽ сут.
+								.variation_info_btn 
+									button(type="button") Заказать
+						li.variation_info 
+								.variation_info_head 
+									h6 На <span>7</span> дней
+								.variation_info_txt 
+									p Если вам нужно  ухать в отпуск или срочную командировку.
+								.variation_info_price
+									p от 1 000 ₽ сут.
+								.variation_info_btn 
+									button(type="button") Заказать
+						li.variation_info 
+								.variation_info_head 
+									h6 На <span>30</span> дней
+								.variation_info_txt 
+									p Постоянное размещение под чутким присмотром.
+								.variation_info_price
+									p от 1 000 ₽ сут.
+								.variation_info_btn 
+									button(type="button") Заказать
+	section.additionally
+		.section_in 
+			.additionally_main 
+				.additionally_head 
+					h2 Дополнительные <span>услуги</span>
+				.additionally_list 
+					.additionally_top 
+						ul 
+							li 
+								p Дополнительные услуги
+							li 
+								p Стоимость
+					.additionally_info 
+						ul 
+							li 
+								p Массаж для пожилого человека
+								p 300 ₽
+							li 
+								p Занятия ЛФК для пожилых людей
+								p 250 ₽
+							li 
+								p Экскурсии, поездки в театр, цирк
+								p от 1 000 ₽
+							li 
+								p Анализы, УЗИ, осмотр психиатра
+								p По прайсу клиники
+							li 
+								p Невропатолог
+								p от 1 000 ₽
+	section.transfer
+		.section_in 
+			.transfer_main
+				.transfer_left
+					.transfer_head 
+						h2 Организуем <span>трансфер</span> до пансионата
+					.transfer_txt
+						p Осуществляем перевозку лежачих пожилых, малоподвижных и одиноких пенсионеров «от кровати до кровати».
+					.transfer_btn 
+						button(type="button") Оставить заявку
+				.transfer_right 
+					img(src="i/ambulance.png", alt="")
+	section.question
+		.section_in
+			.question_main 
+				.question_left 
+					img(src="i/question.png", alt="")
+				.question_right 
+					.question_head 
+						h2 Вопрос-<span>ответ</span>
+					.question_info_main 
+						ul 
+							-for(i = 0; i < 4; i++)
+								li.question_item 
+									.question_item_head
+										h4 Lorem ipsum dolor sit amet, consectetur adipiscing
+										.question_btn
+											button(type="button")
+												+icon('plus')
+									.question_item_bottom
+										p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+	section.full 
+		.section_in 
+			.full_main 
+				.full_head 
+					h2 Получите полную консультацию по всем условиям проживания
+				.full_info 
+					.full_left 
+						ul
+							li.check_first
+								.check_first_head
+									h6 Пол родственника
+								.check_first_variation 
+									ul 
+										li 
+											img(src="i/grandmather.png", alt="")
+											.check_woomen
+												p Женский
+												input(type="radio" name="WoomenOrMen" id="woomen")
+												label(for="woomen")
+										li 
+											img(src="i/grandfather.png", alt="")
+											.check_men
+												p Мужской
+												input(type="radio" name="WoomenOrMen" id="men")
+												label(for="men")
+							li.check_second 
+								.check_second_head
+									h6 Самостоятельный
+								.check_second_variation
+									ul 
+										li 
+											img(src="i/yes.png", alt="")
+											.check_yes
+												p Да
+												input(type="radio" name="CheckYesOrNot" id="yes")
+												label(for="yes")
+										li 
+											img(src="i/no.png", alt="")
+											.check_no
+												p Нет
+												input(type="radio" name="CheckYesOrNot" id="no")
+												label(for="no")
+							li.check_third
+								.check_third_head
+									h6 Возраст: <span id="field">
+								.check_third_variation
+									p(id="field")
+									.pips(id="slider-pips")
+					.full_right 
+						.full_form_w
+							.full_form_main
+								form.full_form
+									.full_form_input
+										input(type="text" placeholder="Имя....")
+									.full_form_input
+										input(type="tel" placeholder="Введите телефон")
+									.full_form_txt 
+										input(type="text" placeholder="Особенности питания, хронические заболевания и т.д.")
+									.full_form_btn 
+										button(type='submit') Получить консультацию
+						.price_policy!='Оставляя данные, вы соглашаетесь с <a href="#">политикой конфиденциальности</a>'
+	section.video 
+		.section_in 
+			.video_main 
+				.video_head 
+					h2 Посмотрите <span>видео</span> о нас
+				.video_video
+					a(href="https://www.youtube.com/watch?v=LXb3EKWsInQ" data-fancybox="video") 
+						img(src="i/videobg.png", alt="")
+						button(type="button")
+							img(src="i/play.png", alt="")
+	section.reviews 
+		.section_in 
+			.reviews_main
+				.reviews_head 
+					h2 Отзывы <span>родственников</span> постояльцев
+					.reviews_slider_nav 
+						.reviews_slider_btn_previos 
+							button(type="button")
+								+icon('prev')
+						.reviews_slider_btn_next 
+							button(type="button")
+								+icon('next')
+				.reviews_slider_w
+					.reviews_slider.swiper
+						.swiper-wrapper
+							-for(i = 0; i < 7; i++)
+								.swiper-slide 
+									.reviews_slide_img
+										img(src="i/reviews/reviews1.png", alt="")
+	section.contacts 
+		.section_in 
+			.contacts_main 
+				.contacts_left 
+					.contacts_head 
+						h2 Наши <span>контакты</span>
+					.contacts_list 
+						ul 
+							li 
+								.contacts_addres 
+									img(src="i/mapmark.png", alt="")
+									p Ул. Пластунская дом 14
+							li 
+								.contacts_mail 
+									img(src="i/mail.png", alt="")
+									a(href="#") pansionat-maiak@yandex.ru
+							li 
+								.contacts_mobil 
+									a(href="#") +7 991 091 25 53
+
+
+
+

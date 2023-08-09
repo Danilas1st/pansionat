@@ -1,0 +1,56 @@
+header.header 
+	.section_in 
+		.header_main
+			.header_top 
+				.header_logo 
+					a(href="#") 
+						img(src="i/logo.png", alt="")
+				.header_addres 
+					img(src="i/mapmark.png", alt="")
+					p Ул. Пластунская дом 14
+				.header_mail 
+					img(src="i/mail.png", alt="")
+					a(href="#") pansionat-maiak@yandex.ru
+				.header_mobil 
+					a(href="#") +7 991 091 25 53
+				.header_btn 
+					button(type="button") Заказать звонок
+			.header_bottom 
+				.header_menu 
+					nav.header_nav.link-hover
+						ul
+							-
+								let nav = [
+									{
+										name: 'Преимущества', 
+										link: '#'
+									},
+									{
+										name: 'Условия', 
+										link: '#'
+									},
+									{
+										name: 'Персонал', 
+										link: '#'
+									},
+									{
+										name: 'Стоимость', 
+										link: '#'
+									},
+									{
+										name: 'Отзывы', 
+										link: '#'
+									},
+									{
+										name: 'Частые вопросы', 
+										link: '#'
+									},
+									{
+										name: 'Контакты', 
+										link: '#'
+									},
+								]
+							each item in nav
+								li 
+									a(href=item.link class="dark")=item.name
+	
