@@ -179,7 +179,7 @@ const swiperhome = new Swiper('.swiperhome', {
       spaceBetween: 30
     },
 		1024: {
-			slidesPerView: 2,
+			slidesPerView: 2.5,
       spaceBetween: 30
 		}
 	},
@@ -187,10 +187,10 @@ const swiperhome = new Swiper('.swiperhome', {
     nextEl: '.home_slider_btn_next',
     prevEl: '.home_slider_btn_previos',
   },
-	pagination: {
-    el: '.swiper_pagination',
-    type: 'bullets',
-  },
+	scrollbar: {
+		el: ".swiper-scrollbar",
+		hide: false,
+	},
 });
 
 

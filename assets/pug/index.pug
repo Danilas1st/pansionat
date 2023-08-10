@@ -7,11 +7,11 @@ block content_block
 		.section_in 
 			.hero_main 
 				.hero_head 
-					h1 Пансионат для пожилых людей <span>в Краснодаре от 1000 рублей
+					h1 Пансионат для пожилых людей <span><br>в Краснодаре от 1000 рублей
 				.hero_info 
-					p Комфортный дом для счастливой и беззаботной жизни дорогих вам людей
+					p Комфортный дом для счастливой <br> и беззаботной жизни дорогих вам людей
 				.hero_bottom 
-					.hero_btn 
+					.hero_btn.btn
 						button(type="button") Оставить заявку
 					.hero_whatsapp 
 						a(href="#")
@@ -35,13 +35,13 @@ block content_block
 									.organize_info_txt 
 										h6 Самостоятельные пожилые
 										p Человек способен без посторонней помощи выполнять ежедневные рутинные действия.
-								.organize_btn 
+								.organize_btn.btn
 									button(type="button") Заказать
 	section.what 
 		.section_in 
-			.what_main 
+			.what_main.p16
 				.what_head
-					h2 Что <span>доступно</sapn> нашим постояльцам?
+					h2 Что <span>доступно</span> нашим постояльцам?
 				.what_list 
 					ul 
 						-for(i = 0; i < 4; i++)
@@ -62,30 +62,31 @@ block content_block
 						p Я отвечу на все ваши вопросы
 				.form_right
 					.form_right_head
-						h2 Запишитесь на <span>бесплатную</span> экскурсию по нашему пансионату
-					.form_btn 
+						h2 Запишитесь на <span>бесплатную</span><br> экскурсию по нашему пансионату
+					.form_btn.btn
 						button(type="button") Оставить заявку
 	section.accommodations
-	.section_in 
-		.accommodations_main 
-			.accommodations_left 
-				img(src="i/conditions.png", alt="")
-			.accommodations_right 
-				h2 Условия <span>проживания</span>
-			.accommodations_list 
-				ul 
-					li.accommodations_txt 
-						h6 Забота о постояльцах
-						p Ежедневный обход врача, измерение температуры и артериального давления. Выдача назначенных медикаментов и контроль их приема. 
-					li.accommodations_txt 
-						h6 Гигиена и питание
-						p Гигиенические процедуры: стрижка волос и ногтей, обработка пролежней. Помощь в принятии пищи, подбор индивидуальной диеты.
-					li.accommodations_txt 
-						h6 Для людей с особенностями
-						p Функциональные кровати для лежачих больных, стулья и туалеты для инвалидов. Коляски, трости, ходунки и др. Пансионат оборудован поручнями, пандусами.
-					li.accommodations_txt 
-						h6 Разнообразный досуг
-						p Организованный досуг, ежедневные прогулки, заботливые и профессиональные сиделки.
+		.section_in 
+			.accommodations_main.p16
+				.accommodations_left 
+					img(src="i/conditions.png", alt="")
+				.accommodations_right 
+					.accommodations_head
+						h2 Условия <span>проживания</span>
+					.accommodations_list 
+						ul 
+							li.accommodations_txt 
+								h6 Забота о постояльцах
+								p Ежедневный обход врача, измерение температуры и артериального давления. Выдача назначенных медикаментов и контроль их приема. 
+							li.accommodations_txt 
+								h6 Гигиена и питание
+								p Гигиенические процедуры: стрижка волос и ногтей, обработка пролежней. Помощь в принятии пищи, подбор индивидуальной диеты.
+							li.accommodations_txt 
+								h6 Для людей с особенностями
+								p Функциональные кровати для лежачих больных, стулья и туалеты для инвалидов. Коляски, трости, ходунки и др. Пансионат оборудован поручнями, пандусами.
+							li.accommodations_txt 
+								h6 Разнообразный досуг
+								p Организованный досуг, ежедневные прогулки, заботливые и профессиональные сиделки.
 	section.home 
 		.section_in 
 			.home_main 
@@ -101,44 +102,50 @@ block content_block
 				.home_slider_w
 					.home_slider.swiperhome
 						.swiper-wrapper
-							-for(i = 0; i < 7; i++)
+							-for(i = 0; i < 12; i++)
 								.swiper-slide 
 									.home_slide_img
 										img(src="i/gallery/gallery1.png", alt="")
-						.swiper_pagination 
+						.swiper-scrollbar
 	section.variation 
 		.section_in 
-			.variation_main 
+			.variation_main.p16
 				.variation_head 
 					h2 <span>Доступные</span> варианты размещения
 				.variation_list 
 					ul 
 						li.variation_info 
+							.variation_info_w
 								.variation_info_head 
 									h6 На <span>1</span> день
 								.variation_info_txt 
 									p Если вам нужно срочно отлучиться в другую часть города по работе и не с кем оставить родственника. Утром размещаете - вечером забираете.
+							.variation_info_bottom
 								.variation_info_price
 									p от 1 000 ₽ сут.
-								.variation_info_btn 
+								.variation_info_btn.btn 
 									button(type="button") Заказать
 						li.variation_info 
+							.variation_info_w
 								.variation_info_head 
 									h6 На <span>7</span> дней
 								.variation_info_txt 
 									p Если вам нужно  ухать в отпуск или срочную командировку.
+							.variation_info_bottom
 								.variation_info_price
 									p от 1 000 ₽ сут.
-								.variation_info_btn 
+								.variation_info_btn.btn 
 									button(type="button") Заказать
 						li.variation_info 
+							.variation_info_w
 								.variation_info_head 
 									h6 На <span>30</span> дней
 								.variation_info_txt 
 									p Постоянное размещение под чутким присмотром.
+							.variation_info_bottom
 								.variation_info_price
 									p от 1 000 ₽ сут.
-								.variation_info_btn 
+								.variation_info_btn.btn 
 									button(type="button") Заказать
 	section.additionally
 		.section_in 
@@ -309,7 +316,9 @@ block content_block
 							li 
 								.contacts_mobil 
 									a(href="#") +7 991 091 25 53
-
+				.contacts_right 
+					.map 
+						<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8077c4b8bd21bcb1437ee1ac741357f526b26ad26ea7d08089d05ccacd6aae76&amp;width=816&amp;height=489&amp;lang=ru_RU&amp;scroll=false"></script>
 
 
 
