@@ -211,7 +211,7 @@ function accordion(title, content) {
 	});
 };
 
-accordion('.qestion_item_head', '.qestion_item_bottom');
+accordion('.question_item_head', '.question_item_bottom');
 
 
 function pips() {

@@ -21,8 +21,9 @@
 @import "sprite";
 
 // Page
+@import "plugins/nouislider";
 
-@import "page/start";
+
 @import "page/home";
 @import "page/policy";
 
@@ -30,4 +31,3 @@
 @import "plugins/swiper";
 @import "plugins/fancybox";
 // @import "plugins/simplebar";s
-@import "plugins/nouislider"

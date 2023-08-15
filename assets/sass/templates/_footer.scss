@@ -1,14 +1,29 @@
 .footer {
+	background: #0893E1;
+	padding: 2rem 0;
 }
 .section_in {
 }
 .footer_main {
+	display: flex;
+	justify-content: space-between;
 }
 .footer_left {
+	display: flex;
+	align-items: center;
 }
 .footer_right {
+	margin-right: 9.1rem;
+	color: $white;
+	font-size: 1.8rem;
+	font-family: $font_1;
 }
 .footer_policy {
+	a {
+		color: $white;
+		font-size: 1.8rem;
+		font-family: $font_1;
+	}
 }
 .footer_arkada {
 }
