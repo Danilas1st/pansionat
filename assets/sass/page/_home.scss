@@ -539,24 +539,11 @@ span {
 	border-radius: 5rem;
 	background: rgba(8, 147, 225, 0.10);
 	position: relative;
-	// &:after {
-	// 	content: "+";
-  // 	font-size: 4rem;
-  // 	position: absolute;
-  // 	right: 2rem;
-	// 	background: rgba(8, 147, 225, 1);
-	// 	border-radius: 50%;
-	// 	width: 5.4rem;
-	// 	height: 5.4rem;
-	// 	display: flex;
-	// 	align-items: center;
-	// 	justify-content: center;
-	// 	color: white;
-	// 	cursor: pointer;
-	// }
 	h4 {
 		font-size: 2rem;
 		letter-spacing: .04rem;
+		font-family: $font_2;
+		font-weight: 400;
 	}
 }
 .question_item_head_btn {
