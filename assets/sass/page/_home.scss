@@ -127,6 +127,7 @@ span {
 		font-size: 2.2rem;
 		font-family: $font_2;
 		margin-bottom: 1.5rem;
+		font-weight: 400;
 	}
 	p {
 		color: rgba(53, 53, 53, 0.80);
@@ -487,7 +488,6 @@ span {
 		width: 100%;
 		height: 100%;
 		background: url('../../i/ambulance.png') center/cover no-repeat;
-		z-index: -1;
 		top: 0;
 		right: 0;
 		border-radius: 5rem;
@@ -495,6 +495,8 @@ span {
 }
 .transfer_left {
 	padding: 8.8rem 0 8.8rem 9rem;
+	position: relative;
+	z-index: 1;
 }
 .transfer_head {
 	margin-bottom: 2rem;
@@ -619,20 +621,6 @@ span {
 		top: 0;
 		left: -5.3rem;
 	}
-	// li {
-	// 	position: relative;
-	// 	counter-increment: item;
-	// 	&:before {
-	// 		content: "0" counter(item);
-	// 		bottom: 40%;
-	// 		left: -17%;
-	// 		font-size: 15rem;
-	// 		color: #FFDE5933;
-	// 		z-index: 1;
-	// 		font-family: $font_3;
-	// 		line-height: 18.2rem;
-	// 	}
-	// }
 }
 .check_first {
 	counter-increment: item;
@@ -674,6 +662,10 @@ span {
 	img {
 		margin-right: 2rem;
 	}
+	label {
+		margin-right: 2rem;
+		cursor: pointer;
+	}
 }
 .check_woomen {
 	p {
@@ -686,7 +678,6 @@ span {
 	}
 }
 .check_second {
-	margin-bottom: 10.5rem;
 	counter-increment: item;
 	position: relative;
 		&:before {
@@ -711,7 +702,9 @@ span {
 		font-weight: 400;
 	}
 }
+
 .check_second_variation {
+	margin-bottom: 10.5rem;
 	ul {
 		display: flex;
 	}
@@ -725,7 +718,101 @@ span {
 	img {
 		margin-right: 2rem;
 	}
+	label {
+		margin-right: 2rem;
+		cursor: pointer;
+	}
 }
+
+.people-check_item {
+	img {
+		border: .1rem solid rgba(53, 53, 53, 0.2);
+		overflow: hidden;
+		border-radius: 2rem;
+	}
+
+	.people-checks {
+		width: 2.5rem;
+		height: 2.5rem;
+		border: .1rem solid rgba(53, 53, 53, 0.20);
+		border-radius: 100%;
+		position: relative;
+		background-color: $white;
+		@include flex-center;
+		background-size: 0;
+	}
+	position: relative;
+	label {
+		@include flex-start;
+	}
+	
+	p {
+		position: relative;
+		padding-bottom: 4rem;
+		
+	}
+	input {
+		display: none;
+		&:checked + label {
+			img {
+				border: .1rem solid #0893E1;
+			}
+			.people-checks {
+				border: none;
+				background: url('../../i/check.svg') center/contain no-repeat;
+			}
+			&:after {
+			}
+		}
+	}
+}
+
+.yes-check_item {
+	img {
+		border: .1rem solid rgba(53, 53, 53, 0.2);
+		overflow: hidden;
+		border-radius: 2rem;
+	}
+	.people-checks {
+		width: 2.5rem;
+		height: 2.5rem;
+		border: .1rem solid rgba(53, 53, 53, 0.20);
+		border-radius: 100%;
+		position: relative;
+		background-color: $white;
+		@include flex-center;
+		background-size: 0;
+	}
+	position: relative;
+	label {
+		@include flex-start;
+	}
+	
+	p {
+		position: relative;
+		padding-bottom: 4rem;
+		
+	}
+	input {
+		display: none;
+		&:checked + label {
+			img {
+				border: .1rem solid #0893E1;
+			}
+			.people-checks {
+				border: none;
+				background: url('../../i/check.svg') center/contain no-repeat;
+			}
+			&:after {
+			}
+		}
+	}
+}
+
+
+
+
+
 .check_yes {
 	p {
 		margin-bottom: 3rem;
@@ -789,6 +876,9 @@ span {
 }
 .noUi-target {
 	border: none;
+}
+.noUi-connects {
+	background: rgba(53, 53, 53, 0.10);
 }
 .noUi-connect {
 	background: rgba(8, 147, 225, 1);

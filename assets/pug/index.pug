@@ -181,7 +181,7 @@ block content_block
 		.section_in 
 			.transfer_main
 				.transfer_left
-					.thansfer_head 
+					.transfer_head 
 						h2 Организуем<br> <span>трансфер</span> до пансионата
 					.transfer_txt
 						p Осуществляем перевозку лежачих пожилых, малоподвижных<br> и одиноких пенсионеров «от кровати до кровати».
@@ -218,36 +218,30 @@ block content_block
 								.check_first_head
 									h6 Пол родственника
 								.check_first_variation 
-									ul 
-										li 
-											img(src="i/grandmather.png", alt="")
-											.check_woomen
-												p Женский
-												input(type="radio" name="WoomenOrMen" id="woomen")
-												label(for="woomen")
-										li 
-											img(src="i/grandfather.png", alt="")
-											.check_men
-												p Мужской
-												input(type="radio" name="WoomenOrMen" id="men")
-												label(for="men")
-							li.check_second 
-								.check_second_head
+									ul
+										-for(i = 0; i < 2; i++)
+											- let people = ['Женский', 'Мужской']
+												li.people-check_item
+													input(type="radio" name="peopleCheck" id=`people-${i}`)
+													label(for=`people-${i}`) 
+														img(src=`i/people-${i}.png`, alt="")
+														.people_checkItem--circle
+															p=people[i]
+															.people-checks
+							li.check_first 
+								.check_first_head
 									h6 Самостоятельный
 								.check_second_variation
-									ul 
-										li 
-											img(src="i/yes.png", alt="")
-											.check_yes
-												p Да
-												input(type="radio" name="CheckYesOrNot" id="yes")
-												label(for="yes")
-										li 
-											img(src="i/no.png", alt="")
-											.check_no
-												p Нет
-												input(type="radio" name="CheckYesOrNot" id="no")
-												label(for="no")
+									ul
+										-for(i = 0; i < 2; i++)
+											- let yes = ['Да', 'Нет']
+												li.yes-check_item
+													input(type="radio" name="peopleCheck" id=`yes-${i}`)
+													label(for=`yes-${i}`) 
+														img(src=`i/yes-${i}.png`, alt="")
+														.people_checkItem--circle
+															p=yes[i]
+															.people-checks
 							li.check_third
 								.check_third_head
 									h6 Возраст: <span id="field">
