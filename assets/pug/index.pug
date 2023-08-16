@@ -16,10 +16,10 @@ block content_block
 					.hero_whatsapp 
 						a(href="#")
 							img(src="i/whatsapp.png", alt="") 
-			.hero_scroll_whatsapp 
 				a(href="#")
-					img(src="i/whatsapp2.png", alt="") 
-				p Свяжитесь с нами в WhatsApp
+					.hero_scroll_whatsapp 
+						img(src="i/whatsapp2.png", alt="") 
+						p Свяжитесь с нами в WhatsApp
 	section.organize
 		.section_in 
 			.organize_main 
@@ -105,7 +105,8 @@ block content_block
 							-for(i = 0; i < 12; i++)
 								.swiper-slide 
 									.home_slide_img
-										img(src="i/gallery/gallery1.png", alt="")
+										a(href="i/gallery/gallery1.png" data-fancybox) 
+											img(src="i/gallery/gallery1.png", alt="")
 						.swiper-scrollbar
 	section.variation 
 		.section_in 
@@ -236,10 +237,10 @@ block content_block
 										-for(i = 0; i < 2; i++)
 											- let yes = ['Да', 'Нет']
 												li.yes-check_item
-													input(type="radio" name="peopleCheck" id=`yes-${i}`)
+													input(type="radio" name="yesCheck" id=`yes-${i}`)
 													label(for=`yes-${i}`) 
 														img(src=`i/yes-${i}.png`, alt="")
-														.people_checkItem--circle
+														.yes_checkItem--circle
 															p=yes[i]
 															.people-checks
 							li.check_third
