@@ -17,3 +17,27 @@
 				.popup_form_btn.btn
 					button(type="submit") Отправить
 				.popup_policy!='Отправляя данные, вы соглашаетесь<br> с <a href="#"> политикой конфиденциальности</a>.'
+
+
+
+.popup.popup_menu(data-id="menu")
+	.popup_form_bg_m.close_popups.remove 
+	.popup_form_m
+		.popup_close_m.close_popups.remove 
+			button(type="button")
+				+icon('close')
+		.popup_menu_head 
+			.popup_logo 
+				a(href="#")
+					img(src="i/logo.png", alt="")
+		.popup_menu_main
+			ul
+				each item in ['Преимущества', 'Условия', 'Персонал', 'Стоимость', 'Отзывы', 'Частые вопросы', 'Контакты']
+					li
+						a(href="#").remove=item  
+		.popup_tel.remove
+			a(href="#") +7 991 091 25 53
+		.popup_mail.remove
+			a(href="#") pansionat-maiak@yandex.ru
+		.popup_addres 
+			p Ул. Пластунская дом 14

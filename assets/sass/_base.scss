@@ -6,7 +6,23 @@
 html {
 	height: 100%;
 	font: 400 calc(100vw / 1920 * 10)/1.33 $font_1;
-	@include bp($point_9) {
+	@include bp(1620px) {
+		font: 400 calc(100vw / 1920 * 13)/1.33 $font_1;
+	}
+	@include bp(1024px) {
+		font: 400 calc(100vw / 1920 * 16)/1.33 $font_1;
+		font-size: 10px;
+	}
+	@include bp(764px) {
+		font: 400 calc(100vw / 1920 * 19)/1.33 $font_1;
+		font-size: 10px;
+	}
+	@include bp(520px) {
+		font: 400 calc(100vw / 1920 * 22)/1.33 $font_1;
+		font-size: 10px;
+	}
+	@include bp(480px) {
+		font: 400 calc(100vw / 1920 * 25)/1.33 $font_1;
 		font-size: 10px;
 	}
 }
@@ -49,7 +65,6 @@ body {
 .base {
 	width: 100%;
 	position: relative;
-	// padding: $header 0 0;
 
 	flex: 1 0 auto;
 }
