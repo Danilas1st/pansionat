@@ -147,7 +147,20 @@ span {
 		}
 	}
 	@include bp(400px) {
-		display: none;
+		width: 7rem;
+		height: 7rem;
+		padding: 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 100%;
+		p {
+			display: none;
+		}
+		img {
+			width: 4rem;
+			height: 4rem;
+		}
 	}
 }
 .organize {
@@ -403,6 +416,9 @@ span {
 .home {
 }
 .home_main {
+	@include bp(400px) {
+		overflow: hidden;
+	}
 }
 .home_head {
 	display: flex;
@@ -875,6 +891,10 @@ span {
 	}
 	img {
 		margin-right: 2rem;
+		@include bp(400px) {
+			margin-right: 0;
+			margin-bottom: 1rem;
+		}
 	}
 	label {
 		margin-right: 2rem;
@@ -928,9 +948,18 @@ span {
 		&:not(:last-child) {
 			margin-right: 11.9rem;
 		}
+		@include bp(400px) {
+			&:not(:last-child) {
+				margin-right: 6.9rem;
+			}
+		}
 	}
 	img {
 		margin-right: 2rem;
+		@include bp(400px) {
+			margin-right: 0;
+			margin-bottom: 1rem;
+		}
 	}
 	label {
 		margin-right: 2rem;
@@ -956,9 +985,6 @@ span {
 		border: .1rem solid rgba(53, 53, 53, 0.2);
 		overflow: hidden;
 		border-radius: 2rem;
-		@include bp(400px) {
-			display: none;
-		}
 	}
 
 	.people-checks {
@@ -970,10 +996,17 @@ span {
 		background-color: $white;
 		@include flex-center;
 		background-size: 0;
+		@include bp(400px) {
+				display: none;
+			}
 	}
 	position: relative;
 	label {
 		@include flex-start;
+		@include bp(400px) {
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 	
 	p {
@@ -996,14 +1029,13 @@ span {
 		}
 	}
 }
-
 .yes-check_item {
 	img {
 		border: .1rem solid rgba(53, 53, 53, 0.2);
 		overflow: hidden;
 		border-radius: 2rem;
 		@include bp(400px) {
-			display: none;
+			width: 9.7rem;
 		}
 	}
 	.people-checks {
@@ -1015,10 +1047,16 @@ span {
 		background-color: $white;
 		@include flex-center;
 		background-size: 0;
+		@include bp(400px) {
+		display: none;
+		}
 	}
 	position: relative;
 	label {
 		@include flex-start;
+		@include bp(400px) {
+			flex-direction: column;
+		}
 	}
 	
 	p {
