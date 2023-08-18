@@ -7,15 +7,15 @@
 		.popup_form_head 
 			h3 Оставьте заявку
 		form.full_form
-			p Ваше имя
+			label(for="name") Ваше имя
 			.full_form_input
-				input(type="text" placeholder="Имя....")
-			p Ваш телефон
+				input(type="text" placeholder="Имя...." id="name")
+			label(for="telefon") Ваш телефон
 			.full_form_input
-				input(type="tel" placeholder="Введите телефон")
+				input(type="tel" placeholder="Введите телефон" id="telefon")
 			.popup_form_bottom
-				.popup_form_btn.btn
-					button(type="submit") Отправить
+				.popup_form_btn
+					input(type="submit" value="Получить консультацию") 
 				.popup_policy!='Отправляя данные, вы соглашаетесь<br> с <a href="#"> политикой конфиденциальности</a>.'
 
 

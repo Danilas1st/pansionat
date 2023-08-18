@@ -34,6 +34,10 @@
 	padding: 6rem;
 	border-radius: 1.5rem;
 	width: 55.7rem;
+	@include bp(400px) {
+		width: 34rem;
+		padding: 5rem 3rem;
+	}
 }
 .popup_close {
 	position: absolute;
@@ -41,6 +45,10 @@
 	right: 2.5rem;
 	button {
 		color: #BB0000;
+	}
+	@include bp(400px) {
+		top: 1.5rem;
+		right: 1.5rem;
 	}
 }
 .icon {
@@ -64,8 +72,19 @@
 }
 .popup_form_btn {
 	margin-bottom: 1rem;
-	button {
+	input {
+		border: none;
 		width: 100%;
+		border-radius: 5rem;
+		background: #0893E1;
+		padding: 2rem 4rem;
+		color: $white;
+		font-size: 1.8rem;
+		font-family: $font_3;
+		cursor: pointer;
+		&:hover {
+			background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), #0893E1;
+		}	
 	}
 }
 .popup_policy {

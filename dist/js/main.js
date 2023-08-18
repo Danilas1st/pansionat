@@ -218,7 +218,7 @@ accordion('.question_item_head', '.question_item_bottom');
 function pips() {
 	let pipsSlider = document.getElementById('slider-pips');
 	const directionField = document.getElementById('field');
-
+	let hiddenInput = document.querySelector('.hiddens-years')
 	
 	noUiSlider.create(pipsSlider, {
     range: {
@@ -237,6 +237,7 @@ function pips() {
 });
 pipsSlider.noUiSlider.on('update', function (values, handle) {
 	directionField.innerHTML = Math.round(values[handle]);
+	hiddenInput.value = Math.round(values[handle]);
 });
 };
 
@@ -345,3 +346,29 @@ function isRemove(popup) {
 	popup.classList.remove('active')
 	document.body.classList.remove('fixed')
 }
+
+function requestCheckboxValue() {
+	const sexRadioButton = document.querySelectorAll('[name="peopleCheck"]');
+	const IndependentRadioButton = document.querySelectorAll('[name="yesCheck"]');
+
+	const selectedSex = document.querySelector(".selectedSex");
+	const selectedYes = document.querySelector(".selectedYes");
+
+	sexRadioButton.forEach((radio) => {
+	  radio.addEventListener("change", function() {
+	    if (radio.checked) {
+				selectedSex.value = radio.nextElementSibling.querySelector("p").textContent;
+	    }
+	  });
+	});
+
+	IndependentRadioButton.forEach((radio) => {
+		radio.addEventListener("change", function() {
+			if (radio.checked) {
+	      selectedYes.value = radio.nextElementSibling.querySelector("p").textContent;
+	    }
+	  });
+	});
+}
+
+requestCheckboxValue();

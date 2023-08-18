@@ -213,57 +213,61 @@ block content_block
 				.full_head 
 					h2 Получите <span>полную консультацию</span> по всем условиям проживания
 				.full_info 
-					.full_left 
-						ul
-							li.check_first
-								.check_first_head
-									h6 Пол родственника
-								.check_first_variation 
-									ul
-										-for(i = 0; i < 2; i++)
-											- let people = ['Женский', 'Мужской']
-												li.people-check_item
-													input(type="radio" name="peopleCheck" id=`people-${i}`)
-													label(for=`people-${i}`) 
-														img(src=`i/people-${i}.png`, alt="")
-														.people_checkItem--circle
-															p=people[i]
-															.people-checks
-							li.check_first 
-								.check_first_head
-									h6 Самостоятельный
-								.check_second_variation
-									ul
-										-for(i = 0; i < 2; i++)
-											- let yes = ['Да', 'Нет']
-												li.yes-check_item
-													input(type="radio" name="yesCheck" id=`yes-${i}`)
-													label(for=`yes-${i}`) 
-														img(src=`i/yes-${i}.png`, alt="")
-														.yes_checkItem--circle
-															p=yes[i]
-															.people-checks
-							li.check_third
-								.check_third_head
-									h6 Возраст: <span id="field">
-								.check_third_variation
-									p(id="field")
-									.pips(id="slider-pips")
+					.full_left
+						form(id="visibleForm")
+							ul
+								li.check_first
+									.check_first_head
+										h6 Пол родственника
+									.check_first_variation 
+										ul
+											-for(i = 0; i < 2; i++)
+												- let people = ['Женский', 'Мужской']
+													li.people-check_item
+														input(type="radio" name="peopleCheck" id=`people-${i}`)
+														label(for=`people-${i}`) 
+															img(src=`i/people-${i}.png`, alt="")
+															.people_checkItem--circle
+																p=people[i]
+																.people-checks
+								li.check_first 
+									.check_first_head
+										h6 Самостоятельный
+									.check_second_variation
+										ul
+											-for(i = 0; i < 2; i++)
+												- let yes = ['Да', 'Нет']
+													li.yes-check_item
+														input(type="radio" name="yesCheck" id=`yes-${i}`)
+														label(for=`yes-${i}`) 
+															img(src=`i/yes-${i}.png`, alt="")
+															.yes_checkItem--circle
+																p=yes[i]
+																.people-checks
+								li.check_third
+									.check_third_head
+										h6 Возраст: <span id="field">
+									.check_third_variation
+										p(id="field")
+										.pips(id="slider-pips")
 					.full_right 
 						.full_form_w
 							.full_form_main
 								form.full_form
-									p Ваше имя
+									label(for="name") Ваше имя
 									.full_form_input
-										input(type="text" placeholder="Имя....")
-									p Ваш телефон
+										input(type="text" placeholder="Имя...." id="name")
+									label(for="telefon") Ваш телефон
 									.full_form_input
-										input(type="tel" placeholder="Введите телефон")
-									p Комментарий
+										input(type="tel" placeholder="Введите телефон" id="telefon")
+									label(for="comment") Комментарий
 									.full_form_txt 
-										textarea(name="txt" placeholder="Особенности питания, хронические заболевания и т.д.")
-									.full_form_btn 
-										button(type='submit') Получить консультацию
+										textarea(name="txt" placeholder="Особенности питания, хронические заболевания и т.д." id="comment")
+									.full_form_btn
+										input(type="submit" value="Получить консультацию") 
+									input(type="hidden", name="hiddens-years" class="hiddens-years")
+									input(type="hidden" name="selectedSex" class="selectedSex")
+									input(type="hidden" name="selectedYes" class="selectedYes")
 								.price_policy!='Оставляя данные, вы соглашаетесь<br> с <a href="#">политикой конфиденциальности</a>'
 	section.video 
 		.section_in 

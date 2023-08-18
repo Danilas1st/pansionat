@@ -468,92 +468,97 @@
                 <h2>Получите <span>полную консультацию</span> по всем условиям проживания</h2>
               </div>
               <div class="full_info"> 
-                <div class="full_left"> 
-                  <ul>
-                    <li class="check_first">
-                      <div class="check_first_head">
-                        <h6>Пол родственника</h6>
-                      </div>
-                      <div class="check_first_variation"> 
-                        <ul>
-                          <li class="people-check_item">
-                            <input type="radio" name="peopleCheck" id="people-0">
-                            <label for="people-0"> <img src="i/people-0.png" alt="">
-                              <div class="people_checkItem--circle">
-                                <p>Женский</p>
-                                <div class="people-checks"></div>
-                              </div>
-                            </label>
-                          </li>
-                          <li class="people-check_item">
-                            <input type="radio" name="peopleCheck" id="people-1">
-                            <label for="people-1"> <img src="i/people-1.png" alt="">
-                              <div class="people_checkItem--circle">
-                                <p>Мужской</p>
-                                <div class="people-checks"></div>
-                              </div>
-                            </label>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li class="check_first"> 
-                      <div class="check_first_head">
-                        <h6>Самостоятельный</h6>
-                      </div>
-                      <div class="check_second_variation">
-                        <ul>
-                          <li class="yes-check_item">
-                            <input type="radio" name="yesCheck" id="yes-0">
-                            <label for="yes-0"> <img src="i/yes-0.png" alt="">
-                              <div class="yes_checkItem--circle">
-                                <p>Да</p>
-                                <div class="people-checks"></div>
-                              </div>
-                            </label>
-                          </li>
-                          <li class="yes-check_item">
-                            <input type="radio" name="yesCheck" id="yes-1">
-                            <label for="yes-1"> <img src="i/yes-1.png" alt="">
-                              <div class="yes_checkItem--circle">
-                                <p>Нет</p>
-                                <div class="people-checks"></div>
-                              </div>
-                            </label>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li class="check_third">
-                      <div class="check_third_head">
-                        <h6>Возраст: <span id="field"></h6>
-                      </div>
-                      <div class="check_third_variation">
-                        <p id="field"></p>
-                        <div class="pips" id="slider-pips"></div>
-                      </div>
-                    </li>
-                  </ul>
+                <div class="full_left">
+                  <form id="visibleForm">
+                    <ul>
+                      <li class="check_first">
+                        <div class="check_first_head">
+                          <h6>Пол родственника</h6>
+                        </div>
+                        <div class="check_first_variation"> 
+                          <ul>
+                            <li class="people-check_item">
+                              <input type="radio" name="peopleCheck" id="people-0">
+                              <label for="people-0"> <img src="i/people-0.png" alt="">
+                                <div class="people_checkItem--circle">
+                                  <p>Женский</p>
+                                  <div class="people-checks"></div>
+                                </div>
+                              </label>
+                            </li>
+                            <li class="people-check_item">
+                              <input type="radio" name="peopleCheck" id="people-1">
+                              <label for="people-1"> <img src="i/people-1.png" alt="">
+                                <div class="people_checkItem--circle">
+                                  <p>Мужской</p>
+                                  <div class="people-checks"></div>
+                                </div>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="check_first"> 
+                        <div class="check_first_head">
+                          <h6>Самостоятельный</h6>
+                        </div>
+                        <div class="check_second_variation">
+                          <ul>
+                            <li class="yes-check_item">
+                              <input type="radio" name="yesCheck" id="yes-0">
+                              <label for="yes-0"> <img src="i/yes-0.png" alt="">
+                                <div class="yes_checkItem--circle">
+                                  <p>Да</p>
+                                  <div class="people-checks"></div>
+                                </div>
+                              </label>
+                            </li>
+                            <li class="yes-check_item">
+                              <input type="radio" name="yesCheck" id="yes-1">
+                              <label for="yes-1"> <img src="i/yes-1.png" alt="">
+                                <div class="yes_checkItem--circle">
+                                  <p>Нет</p>
+                                  <div class="people-checks"></div>
+                                </div>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="check_third">
+                        <div class="check_third_head">
+                          <h6>Возраст: <span id="field"></h6>
+                        </div>
+                        <div class="check_third_variation">
+                          <p id="field"></p>
+                          <div class="pips" id="slider-pips"></div>
+                        </div>
+                      </li>
+                    </ul>
+                  </form>
                 </div>
                 <div class="full_right"> 
                   <div class="full_form_w">
                     <div class="full_form_main">
                       <form class="full_form">
-                        <p>Ваше имя</p>
+                        <label for="name">Ваше имя</label>
                         <div class="full_form_input">
-                          <input type="text" placeholder="Имя....">
+                          <input type="text" placeholder="Имя...." id="name">
                         </div>
-                        <p>Ваш телефон</p>
+                        <label for="telefon">Ваш телефон</label>
                         <div class="full_form_input">
-                          <input type="tel" placeholder="Введите телефон">
+                          <input type="tel" placeholder="Введите телефон" id="telefon">
                         </div>
-                        <p>Комментарий</p>
+                        <label for="comment">Комментарий</label>
                         <div class="full_form_txt"> 
-                          <textarea name="txt" placeholder="Особенности питания, хронические заболевания и т.д."></textarea>
+                          <textarea name="txt" placeholder="Особенности питания, хронические заболевания и т.д." id="comment"></textarea>
                         </div>
-                        <div class="full_form_btn"> 
-                          <button type="submit">Получить консультацию</button>
+                        <div class="full_form_btn">
+                          <input type="submit" value="Получить консультацию">
                         </div>
+                        <input class="hiddens-years" type="hidden" name="hiddens-years">
+                        <input class="selectedSex" type="hidden" name="selectedSex">
+                        <input class="selectedYes" type="hidden" name="selectedYes">
                       </form>
                       <div class="price_policy">Оставляя данные, вы соглашаетесь<br> с <a href="#">политикой конфиденциальности</a></div>
                     </div>
@@ -695,17 +700,17 @@
           <h3>Оставьте заявку</h3>
         </div>
         <form class="full_form">
-          <p>Ваше имя</p>
+          <label for="name">Ваше имя</label>
           <div class="full_form_input">
-            <input type="text" placeholder="Имя....">
+            <input type="text" placeholder="Имя...." id="name">
           </div>
-          <p>Ваш телефон</p>
+          <label for="telefon">Ваш телефон</label>
           <div class="full_form_input">
-            <input type="tel" placeholder="Введите телефон">
+            <input type="tel" placeholder="Введите телефон" id="telefon">
           </div>
           <div class="popup_form_bottom">
-            <div class="popup_form_btn btn">
-              <button type="submit">Отправить</button>
+            <div class="popup_form_btn">
+              <input type="submit" value="Получить консультацию">
             </div>
             <div class="popup_policy">Отправляя данные, вы соглашаетесь<br> с <a href="#"> политикой конфиденциальности</a>.</div>
           </div>
